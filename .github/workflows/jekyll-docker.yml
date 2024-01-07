@@ -20,3 +20,8 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        
+# Introduction:
+# This GitHub Actions workflow, named "Jekyll Site CI," is triggered on push or pull requests to the 'main' branch.
+# It utilizes an Ubuntu environment to run a job that checks out the repository and builds a Jekyll site inside the jekyll/builder Docker container.
+# The resulting site is then made available in the '_site' directory.
